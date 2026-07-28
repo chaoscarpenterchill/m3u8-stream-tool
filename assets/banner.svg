@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050b16"/>
+      <stop offset="55%" stop-color="#0a1a2f"/>
+      <stop offset="100%" stop-color="#12102a"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="chunkFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="glowSpot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fileGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <circle cx="950" cy="120" r="220" fill="url(#glowSpot)"/>
+  <circle cx="150" cy="300" r="180" fill="url(#glowSpot)" opacity="0.5"/>
+
+  <g opacity="0.08" stroke="#22d3ee" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="360"/>
+    <line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="800" y1="0" x2="800" y2="360"/>
+    <line x1="1000" y1="0" x2="1000" y2="360"/>
+  </g>
+
+  <!-- stream chunk fragments converging into merged file -->
+  <g>
+    <rect x="720" y="70" width="46" height="34" rx="4" fill="url(#chunkFill)" stroke="#22d3ee" stroke-width="1.5"/>
+    <rect x="700" y="140" width="46" height="34" rx="4" fill="url(#chunkFill)" stroke="#22d3ee" stroke-width="1.5"/>
+    <rect x="730" y="205" width="46" height="34" rx="4" fill="url(#chunkFill)" stroke="#22d3ee" stroke-width="1.5"/>
+    <rect x="700" y="260" width="46" height="34" rx="4" fill="url(#chunkFill)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="640" y="30" width="46" height="34" rx="4" fill="url(#chunkFill)" stroke="#818cf8" stroke-width="1.5" opacity="0.85"/>
+
+    <path d="M766 87 L900 150" stroke="#22d3ee" stroke-width="1.5" opacity="0.6" fill="none"/>
+    <path d="M746 157 L900 165" stroke="#22d3ee" stroke-width="1.5" opacity="0.6" fill="none"/>
+    <path d="M776 222 L900 180" stroke="#22d3ee" stroke-width="1.5" opacity="0.6" fill="none"/>
+    <path d="M746 277 L900 195" stroke="#818cf8" stroke-width="1.5" opacity="0.6" fill="none"/>
+    <path d="M686 47 L900 140" stroke="#818cf8" stroke-width="1.5" opacity="0.5" fill="none"/>
+  </g>
+
+  <!-- merged output file -->
+  <g>
+    <rect x="905" y="105" width="150" height="150" rx="14" fill="#0b1526" stroke="url(#fileGrad)" stroke-width="3"/>
+    <polygon points="965,150 965,215 1015,182.5" fill="url(#fileGrad)"/>
+    <path d="M925 240 h110" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- download arrow motif -->
+  <g stroke="#22d3ee" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M980 60 L980 100"/>
+    <path d="M960 82 L980 102 L1000 82"/>
+  </g>
+
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="70" font-weight="700" fill="#f1f5f9" textLength="1000" lengthAdjust="spacingAndGlyphs">
+    M3U8 Stream Downloader
+  </text>
+
+  <text x="60" y="205" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#94a3b8" textLength="920" lengthAdjust="spacingAndGlyphs">
+    Download and merge M3U8 streams into a single video file with ease.
+  </text>
+
+  <g opacity="0.7">
+    <circle cx="70" cy="255" r="4" fill="#22d3ee"/>
+    <text x="88" y="261" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#67e8f9">Fetch segments</text>
+    <circle cx="270" cy="255" r="4" fill="#818cf8"/>
+    <text x="288" y="261" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#a5b4fc">Decrypt &amp; merge</text>
+    <circle cx="490" cy="255" r="4" fill="#22d3ee"/>
+    <text x="508" y="261" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#67e8f9">Export MP4</text>
+  </g>
+</svg>
